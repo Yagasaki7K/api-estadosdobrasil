@@ -7,7 +7,7 @@ We intentionally keep it simple by not providing information such as ZIP codes, 
 
 ## To Install
 
-1. Install the package `api-estadosdobrasil` in your project.
+Install the package `api-estadosdobrasil` in your project.
 
 ```bash
 npm install api-estadosdobrasil
