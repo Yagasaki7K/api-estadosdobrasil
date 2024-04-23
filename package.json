@@ -5,11 +5,10 @@
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
-    "@types/bun": "latest",
-    "jest": "^29.7.0"
+    "@types/bun": "latest"
   },
   "scripts": {
-    "commit": "bun update && read -p 'Descriptions Commit: ' message && git add . && echo -n \"$message - \" && node getTime.ts | xargs -I {} git commit -m \"$message - {}\" && git push",
+    "commit": "bun update && read -p 'Descriptions Commit: ' message && git add . && echo -n \"$message - \" && node getTime.js | xargs -I {} git commit -m \"$message - {}\" && git push",
     "test": "jest",
     "test:watch": "jest --watch"
   },
