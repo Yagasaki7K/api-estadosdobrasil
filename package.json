@@ -8,8 +8,7 @@
     "@types/bun": "latest"
   },
   "scripts": {
-    "commit": "bun update && read -p 'Descriptions Commit: ' message && git add . && echo -n \"$message - \" && node getTime.js | xargs -I {} git commit -m \"$message - {}\" && git push",
-    "publishPackage": "npm publish && yarn publish"
+    "commit": "bun update && read -p 'Descriptions Commit: ' message && git add . && echo -n \"$message - \" && node getTime.js | xargs -I {} git commit -m \"$message - {}\" && git push && npm publish && yarn publish"
   },
   "repository": {
     "type": "git",
