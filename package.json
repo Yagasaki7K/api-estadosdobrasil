@@ -1,7 +1,7 @@
 {
   "name": "api-estadosdobrasil",
   "description": "A better way to format and get details about your variables",
-  "version": "1.0.20",
+  "version": "1.0.6",
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
