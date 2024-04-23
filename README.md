@@ -5,6 +5,18 @@ for filtering data in tracking tables or similar generic tasks.
 
 We intentionally keep it simple by not providing information such as ZIP codes, street names, or neighborhood names.
 
+## To Install
+
+1. Install the package `api-estadosdobrasil` in your project.
+
+```bash
+npm install api-estadosdobrasil
+
+yarn add api-estadosdobrasil
+
+bun add api-estadosdobrasil
+```
+
 ## How to consume?
 There are several ways you can consume this API. You can simply:
 
