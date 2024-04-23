@@ -63,3 +63,18 @@ Another way is to fetch directly from the route or from the repository file.
 ## How to Contribute?
 If you have ideas, you can contribute to the repository on [GitHub](https://github.com/Yagasaki7K/api-estadosdobrasil),
 following the basic concepts of a pull request - we don't have a specific template for this.
+
+## Tests
+
+```bash
+bun test v1.1.4 (fbe2fe0c)
+
+index.test.ts:
+✓ Brasil object should be imported correctly [1.04ms]
+✓ Should have states in the list of states [0.03ms]
+✓ Should have cities in the list of cities [0.03ms]
+✓ Campinas should be in the list of cities of São Paulo [1.20ms]
+✓ São Paulo state should be in the list of states [0.03ms]
+
+5 pass
+```

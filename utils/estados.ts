@@ -13,8 +13,8 @@ interface Database {
     cidades: Cidade[];
 }
   
-  function Brasil(): Database {
-    return require('./database.json');
-  }
+function Brasil(): Database {
+    return require('../database.json');
+}
   
-export default Brasil
+export default Brasil;
