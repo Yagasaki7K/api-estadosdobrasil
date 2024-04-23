@@ -1,0 +1,32 @@
+{
+  "name": "api-estadosdobrasil",
+  "description": "A better way to format and get details about your variables",
+  "version": "1.0.0",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "jest": "^29.7.0"
+  },
+  "scripts": {
+    "commit": "bun update && read -p 'Descriptions Commit: ' message && git add . && echo -n \"$message - \" && node getTime.ts | xargs -I {} git commit -m \"$message - {}\" && git push",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yagasaki7K/api-estadosdobrasil.git"
+  },
+  "author": "Yagasaki7K",
+  "homepage": "https://github.com/Yagasaki7K/api-estadosdobrasil#readme",
+  "keywords": [
+    "formatting"
+  ],
+  "license": "ISC",
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "fastify": "^4.26.2"
+  }
+}

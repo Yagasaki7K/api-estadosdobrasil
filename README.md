@@ -1,19 +1,65 @@
-# API Estados do Brasil
+# API - Estados do Brasil
 
-O repositório "API Estados do Brasil" é um conjunto de dados que contenham informações sobre os estados e cidades do Brasil. Ele é denominado como uma "API" (Application Programming Interface) porque fornece uma interface para acessar esses dados de forma programática, permitindo que eles sejam utilizados em diversas aplicações e serviços.
+The aim is to assist in querying Brazilian states and their cities, whether for use in user registration forms or even
+for filtering data in tracking tables or similar generic tasks.
 
-O repositório inclui informações sobre todos os estados do Brasil, como seu nome, sigla, e suas cidades. 
+We intentionally keep it simple by not providing information such as ZIP codes, street names, or neighborhood names.
 
-Esses dados são organizados em forma de JSON (JavaScript Object Notation), que é uma linguagem de marcação de dados leve e fácil de entender. Isso permite que os desenvolvedores tenham acesso fácil aos dados e possam usá-los em suas aplicações sem precisar criar sua própria infraestrutura para coletar e armazenar esses dados.
+## How to consume?
+There are several ways you can consume this API. You can simply:
 
-O repositório "API Estados do Brasil" é mantido por Anderson "Yagasaki" Marlon e a seus contribuidores.
+Install the dependency and import `Brasil`, then assign it to a variable in your project.
 
-Algumas das vantagens deste repositório incluem:
+```typescript
+import Brasil from 'api-estadosdobrasil'
 
-- Facilidade de acesso: Os desenvolvedores podem facilmente acessar os dados pelo GitHub ou através da API;
-- Variabilidade: O repositório inclui informações sobre todos os estados e cidades do Brasil;
-- Fomento à transparência: A API está disponível para qualquer pessoa verificar e explorar;
+const myEstados = Brasil.estados // To get all state information
+const myCidades = Brasil.cidades // To get all city information
+```
 
-Se possuir dúvidas, você pode me chamar através do [Twitter](https://twitter.com/yagasaki7k)
+And how do I specifically get information about the city of Campinas, located in the interior of São Paulo, if I want to
+consume it?
 
-Para consumir, é só fazer um fetch com base nesse JSON: [https://raw.githubusercontent.com/Yagasaki7K/api-estadosdobrasil/main/database.json](https://raw.githubusercontent.com/Yagasaki7K/api-estadosdobrasil/main/database.json)
+```typescript
+import Brasil from 'api-estadosdobrasil'
+
+const Campinas = Brasil.cidades.siglaEstado['SP'].nome['Campinas']
+```
+
+To consume only the name of the state of São Paulo:
+
+```typescript
+import Brasil from 'api-estadosdobrasil'
+
+const SP = Brasil.estados.id['SP'].nome
+```
+
+Of course, you can filter and customize this according to your preferences.
+
+Another way is to fetch directly from the route or from the repository file.
+
+2. Fetch from the route and consume from there.
+
+```typescript
+    fetch("https://api.github.com/users/Yagasaki7K")
+        .then(response => response.json())
+        .then(data => {
+            setDataAPI(data) // If you're using a State of React for example.
+            let data = JSON.stringify(data) // If you're using a variable.
+        });
+```
+
+2.1 Fetch directly from the file in the repository - less recommended.
+
+```typescript
+    fetch("https://github.com/Yagasaki7K/api-estadosdobrasil/blob/main/database.json")
+        .then(response => response.text())
+        .then(data => {
+            setDataAPI(data) // If you're using a State of React for example.
+            let data = JSON.stringify(data) // If you're using a variable.
+        });
+```
+
+## How to Contribute?
+If you have ideas, you can contribute to the repository on [GitHub](https://github.com/Yagasaki7K/api-estadosdobrasil),
+following the basic concepts of a pull request - we don't have a specific template for this.
