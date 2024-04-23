@@ -1,14 +1,14 @@
 {
   "name": "api-estadosdobrasil",
   "description": "A better way to format and get details about your variables",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
     "@types/bun": "latest"
   },
   "scripts": {
-    "commit": "bun update && read -p 'Descriptions Commit: ' message && git add . && echo -n \"$message - \" && node getTime.js | xargs -I {} git commit -m \"$message - {}\" && git push && npm publish && yarn publish"
+    "commit": "bun update && read -p 'Descriptions Commit: ' message && git add . && echo -n \"$message - \" && node getTime.js | xargs -I {} git commit -m \"$message - {}\" && git push && npm publish && yarn publish && git push"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,6 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "api-estadosdobrasil": "^1.0.0",
     "fastify": "^4.26.2"
   }
 }
